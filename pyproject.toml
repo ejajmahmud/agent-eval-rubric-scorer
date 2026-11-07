@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-eval-rubric-scorer"
+version = "0.1.0"
+description = "Multi-criteria automated evaluation rubric scoring agent trajectories on tool efficiency, goal completion, and safety compliance"
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [
+    {name = "Ejaj Mahmud", email = "dev@ejajmahmud.com"}
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+dependencies = []
+
+[project.scripts]
+agent-eval-rubric-scorer = "agent_eval_rubric_scorer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agent_eval_rubric_scorer*"]
